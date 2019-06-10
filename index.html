@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #container {
+        background-image: url("images/back.png");
+        width: 100vw;
+        height: 100vh;
+      }
+      #start img {
+        width: 200px;
+        height: 100px;
+        margin: auto;
+        position: relative;
+        left: calc(50vw - 100px);
+        top: 200px;
+      }
+      #start img:hover{
+          opacity: 0.8;
+          cursor: pointer;
+      }
+      .baloons{
+          width:100px;
+          height: 200px; 
+          position: absolute;
+
+      }
+      #score{
+          color: rgb(151, 141, 141);
+          position: absolute;
+          left: 90vw;
+          top: 0vh;
+          font-size: 100px;
+
+      }
+      #scoreImg{
+          width: 200px;
+          height: 100px;
+          position: relative;
+          left: 72vw;
+          top: 10vh;
+      }
+      #chanceImg{
+        width: 200px;
+          height: 100px;
+          position: relative;
+          left: 58vw;
+          top: 30vh;
+
+      }
+      #chance{
+        color: rgb(122, 68, 16);
+          position: absolute;
+          left: 90vw;
+          top: 22vh;
+          font-size: 80px;
+
+      }
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <div id="start" >
+            <img src="images/start-button.png" alt="" onclick="startGame()"/>
+        </div>
+        <div
+        id="game" class="hide">
+        <img src="images/score.png" id="scoreImg" alt="">
+        <img src="images/chances.png" id="chanceImg" alt="">
+        <h1 id="score">0</h1>
+        <h1 id="chance">5</h1>
+    </div>
+      <div id="gameEnd" class="hide">
+        <img src="images/end.png" />
+      </div>
+      <!-- <button onclick="generateBaloons()">Click</button> -->
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
